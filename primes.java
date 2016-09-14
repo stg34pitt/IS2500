@@ -5,19 +5,23 @@ public class primes {
 		
 	      int limit = 10000;
 	      int max = 100000;
+	      int lower = 2;
+	      int higher = 10000;
 	    
-	      //printing primer numbers till the steps (2 to n)
+	      //printing prime numbers till the steps (2 to n)
 	      System.out.println("Printing prime numbers from 2 to " + limit);
 	      
-	      	  long time = System.nanoTime();
-		      for(int i = 2; i<=max; i++){
+	      for(int n=2; n<=max; n+=10000){
+	      	
+		      for(int i = lower; i<=higher; i++){
 		          //print prime numbers only
 		          if(isPrime(i)){
 		              System.out.println(i);
 		          }
 		      }
-		      
-		      System.out.println(time);
+	          higher+= 10000;
+		     
+	       }
 	    }
 
 	    /*
